@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33F74377-D921-4F64-92EB-8BABF8978F73}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Poker</RootNamespace>
+    <AssemblyName>Poker</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="CardClient.cs" />
+    <Compile Include="GameFlow.cs" />
+    <Compile Include="PlayerInstance.cs" />
+    <Compile Include="Ranks.cs" />
+    <Compile Include="CardServer.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Card.cs" />
+    <Compile Include="CardMatch.cs" />
+    <Compile Include="CardSort.cs" />
+    <Compile Include="DeckOfCards.cs" />
+    <Compile Include="EvalHand.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\10C.png" />
+    <Resource Include="png\10D.png" />
+    <Resource Include="png\10H.png" />
+    <Resource Include="png\10S.png" />
+    <Resource Include="png\2C.png" />
+    <Resource Include="png\2D.png" />
+    <Resource Include="png\2H.png" />
+    <Resource Include="png\2S.png" />
+    <Resource Include="png\3C.png" />
+    <Resource Include="png\3D.png" />
+    <Resource Include="png\3H.png" />
+    <Resource Include="png\3S.png" />
+    <Resource Include="png\4C.png" />
+    <Resource Include="png\4D.png" />
+    <Resource Include="png\4H.png" />
+    <Resource Include="png\4S.png" />
+    <Resource Include="png\5C.png" />
+    <Resource Include="png\5D.png" />
+    <Resource Include="png\5H.png" />
+    <Resource Include="png\5S.png" />
+    <Resource Include="png\6C.png" />
+    <Resource Include="png\6D.png" />
+    <Resource Include="png\6H.png" />
+    <Resource Include="png\6S.png" />
+    <Resource Include="png\7C.png" />
+    <Resource Include="png\7D.png" />
+    <Resource Include="png\7H.png" />
+    <Resource Include="png\8C.png" />
+    <Resource Include="png\8D.png" />
+    <Resource Include="png\8H.png" />
+    <Resource Include="png\8S.png" />
+    <Resource Include="png\9C.png" />
+    <Resource Include="png\9D.png" />
+    <Resource Include="png\9H.png" />
+    <Resource Include="png\9S.png" />
+    <Resource Include="png\AC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\AD.png" />
+    <Resource Include="png\AH.png" />
+    <Resource Include="png\AS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\JC.png" />
+    <Resource Include="png\JD.png" />
+    <Resource Include="png\JH.png" />
+    <Resource Include="png\JS.png" />
+    <Resource Include="png\KC.png" />
+    <Resource Include="png\KD.png" />
+    <Resource Include="png\KH.png" />
+    <Resource Include="png\KS.png" />
+    <Resource Include="png\QC.png" />
+    <Resource Include="png\QD.png" />
+    <Resource Include="png\QH.png" />
+    <Resource Include="png\QS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\blue_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="TIFF\10C.tif" />
+    <Resource Include="TIFF\10D.tif" />
+    <Resource Include="TIFF\10H.tif" />
+    <Resource Include="TIFF\10S.tif" />
+    <Resource Include="TIFF\2C.tif" />
+    <Resource Include="TIFF\2D.tif" />
+    <Resource Include="TIFF\2H.tif" />
+    <Resource Include="TIFF\2S.tif" />
+    <Resource Include="TIFF\3C.tif" />
+    <Resource Include="TIFF\3D.tif" />
+    <Resource Include="TIFF\3H.tif" />
+    <Resource Include="TIFF\3S.tif" />
+    <Resource Include="TIFF\4C.tif" />
+    <Resource Include="TIFF\4D.tif" />
+    <Resource Include="TIFF\4H.tif" />
+    <Resource Include="TIFF\4S.tif" />
+    <Resource Include="TIFF\5C.tif" />
+    <Resource Include="TIFF\5D.tif" />
+    <Resource Include="TIFF\5H.tif" />
+    <Resource Include="TIFF\5S.tif" />
+    <Resource Include="TIFF\6C.tif" />
+    <Resource Include="TIFF\6D.tif" />
+    <Resource Include="TIFF\6H.tif" />
+    <Resource Include="TIFF\6S.tif" />
+    <Resource Include="TIFF\7C.tif" />
+    <Resource Include="TIFF\7D.tif" />
+    <Resource Include="TIFF\7H.tif" />
+    <Resource Include="TIFF\8C.tif" />
+    <Resource Include="TIFF\8D.tif" />
+    <Resource Include="TIFF\8H.tif" />
+    <Resource Include="TIFF\8S.tif" />
+    <Resource Include="TIFF\9C.tif" />
+    <Resource Include="TIFF\9D.tif" />
+    <Resource Include="TIFF\9H.tif" />
+    <Resource Include="TIFF\9S.tif" />
+    <Resource Include="TIFF\AC.tif" />
+    <Resource Include="TIFF\AD.tif" />
+    <Resource Include="TIFF\AH.tif" />
+    <Resource Include="TIFF\AS.tif" />
+    <Resource Include="TIFF\blue_back.tif" />
+    <Resource Include="TIFF\JC.tif" />
+    <Resource Include="TIFF\JD.tif" />
+    <Resource Include="TIFF\JH.tif" />
+    <Resource Include="TIFF\JS.tif" />
+    <Resource Include="TIFF\KC.tif" />
+    <Resource Include="TIFF\KD.tif" />
+    <Resource Include="TIFF\KH.tif" />
+    <Resource Include="TIFF\KS.tif" />
+    <Resource Include="TIFF\QC.tif" />
+    <Resource Include="TIFF\QD.tif" />
+    <Resource Include="TIFF\QH.tif" />
+    <Resource Include="TIFF\QS.tif" />
+    <Resource Include="TIFF\7S.tif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\7S.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
